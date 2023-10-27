@@ -1,0 +1,157 @@
+.pop-up-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2% 2%;
+    background: rgb(32, 32, 32, .5);
+    transition: opacity .3s;
+    z-index: 1000;
+}
+.pop-up {
+    width: inherit;
+    height: inherit;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+}
+.img-pop-up {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+.about-pop-up {
+    width: 55%;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about-pop-up h1:first-child {
+    position: relative;
+}
+.about-pop-up h1:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #202020;
+}
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+.price-box p:first-child {
+    font-weight: bold;
+}
+.describe-box {
+    display: flex;
+    flex-direction: column;
+}
+.describe-box p:first-child {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.x-icon-pop {
+    position: absolute;
+    top: 9%;
+    right: 4.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.x-icon-pop:hover .x-icon{
+    opacity: .5;
+}
+.x-icon {
+    box-sizing: content-box;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+.display-heart-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 9%;
+    right: 4.5%;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.display-heart-icon:hover .heart-icon-pop{
+    opacity: .5;
+}
+.heart-icon-pop {
+    box-sizing: content-box;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color .3s, transform 3s;
+    animation: none;
+    color: #303030;
+    transition: opacity .3s;
+}
+.heart-active {
+    color: pink;
+    animation: heart-icon-aimt .5s;
+}
+@keyframes heart-icon-aimt {
+    33% {
+        transform: rotate(-30deg);
+    }
+    66% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@media screen and (width <= 700px) {
+    .pop-up {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-pop-up {
+        width: 100%;
+        height: 50%;
+        object-fit: scale-down;
+        background: #f5f5f5;
+        border-top-right-radius: inherit;
+        border-bottom-left-radius: 0;
+    }
+    .about-pop-up {
+        width: 100%;
+        height: 50%;
+        padding: 6% 4%;
+    }
+    .about-pop-up h1:first-child {
+        text-align: center;
+    }
+    .about-pop-up h1:first-child::after {
+        display: none;
+    }
+    .price-box {
+        margin: 0 5%;
+    }
+    .describe-box {
+        margin: 0 5%;
+        margin-right: 10%;
+    }
+    .x-icon-pop {
+        top: 4.5%;
+    }
+    .display-heart-icon {
+        bottom: 4.5%;
+    }
+}

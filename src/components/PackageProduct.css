@@ -1,0 +1,76 @@
+.package-product {
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #b0b0b0;
+    position: relative;
+    overflow: hidden;
+    /* margin-bottom: 8%; */
+}
+.product {
+    width: 100%;
+    height: 100%;
+}
+.poster {
+    width: 100%;
+    height:70%;
+    object-fit: cover;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    transition: transform .3s;
+    z-index: -1;
+}
+.product:hover .poster {
+    transform: scale(1.15);
+}
+.text-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10%;
+    text-align: center;
+    background: #fff;
+}
+.text-box p:first-child {
+    font-size: 18px;
+}
+.text-box p:last-child {
+    font-weight: bold;
+    font-size: 15px;
+}
+.heart-icon {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 23px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #bcbcbc;
+    color: #bcbcbc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.full-heart {
+    color: pink;
+}
+
+@media screen and (width <= 750px) {
+    .heart-icon {
+        padding: 8px;
+        font-size: 20px;
+    }
+    .text-box p:first-child {
+        font-size: 16px;
+    }
+    .text-box p:last-child {
+        font-size: 14px;
+    }
+}

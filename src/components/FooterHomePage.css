@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.footer-container {
+    height: 300px;
+    background: #282828;
+    position: relative;
+    color: #fff;
+}
+.display {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+.display p {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+.display .icon {
+    margin-right: 5px;
+}

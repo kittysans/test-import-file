@@ -1,0 +1,12 @@
+.content {
+    padding: 0 5%;
+    background: #e1e1e1;
+}
+.content > div  {
+    background: #fff;
+}
+@media screen and (width <= 750px) {
+    .content {
+        padding: 0;
+    }
+}
